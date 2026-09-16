@@ -1,0 +1,10 @@
+.nav-link {
+  color: #0066cc;
+  text-decoration: none;    /* Remove underline */
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #004080;
+}

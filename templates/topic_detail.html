@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ topic.title }} — LearnAnything{% endblock %}
+
+{% block content %}
+    <h1>{{ topic.title }}</h1>
+    <p class="description">{{ topic.description }}</p>
+    <div class="main-content">
+        {{ topic.content }}
+    </div>
+{% endblock %}

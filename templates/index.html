@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Все темы — LearnAnything{% endblock %}
+
+{% block content %}
+    <h1>Каталог знаний</h1>
+    <ul>
+        {% for topic in topics %}
+            <li>
+                <a href="{% url 'topic_detail' slug=topic.slug %}">{{ topic.title }}</a>
+            </li>
+        {% empty %}
+            <p>Тем пока нет. Добавь их через админку!</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

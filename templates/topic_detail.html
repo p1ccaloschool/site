@@ -3,9 +3,16 @@
 {% block title %}{{ topic.title }} — LearnAnything{% endblock %}
 
 {% block content %}
-    <h1>{{ topic.title }}</h1>
-    <p class="description">{{ topic.description }}</p>
-    <div class="main-content">
-        {{ topic.content }}
-    </div>
+    <article class="topic-page">
+        <h1>{{ topic.title }}</h1>
+        {% if topic.description %}
+            <p class="lead">{{ topic.description }}</p>
+        {% endif %}
+        <hr>
+        
+        <!-- Фильтр |safe позволяет отображать форматирование и картинки -->
+        <div class="topic-body">
+            {{ topic.content|safe }}
+        </div>
+    </article>
 {% endblock %}

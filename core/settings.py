@@ -39,11 +39,18 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'django_ckeditor_5',
     "main",
+    "tinymce",
 ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 500,
+    'plugins': 'forecolor backcolor image link code table lists',
+    'toolbar': 'undo redo | blocks | bold italic forecolor backcolor | alignleft aligncenter alignright | bullist numlist | code',
+}
 
 CKEDITOR_5_CONFIGS = {
     'default': {

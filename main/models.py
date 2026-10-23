@@ -1,5 +1,6 @@
 from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
+from tinymce.models import HTMLField
 
 class Topic(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название")
@@ -8,6 +9,7 @@ class Topic(models.Model):
     
     # Визуальный редактор с картинками
     content = CKEditor5Field('Контент', config_name='default')
+    content = HTMLField()
     
     created_at = models.DateTimeField(auto_now_add=True)
 
